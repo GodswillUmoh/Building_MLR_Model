@@ -1,4 +1,4 @@
-# Building_MLR_Model
+# Stepwise Regression:
 
 ## Building A model with more than one Independent Variable
 > When you have more than one independent variable (IV), such as x1, x2, x3, x4, x5, x6 etc, and y (dependent variable). They are many and we may decide to drop some of the IV.
