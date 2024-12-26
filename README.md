@@ -14,9 +14,9 @@
 >    + You can adopt this method if you are preparing for backward elimination
 
 > 2. + Backward Elimination:
->      #### Steps for Stepwise regression- step By Step
+>      #### Step By Step
 >      + Step 1: Select a significant level to stay in the model (SL=0.05)
->      + Sep2: Fit the full model with all possible predictors. Select the ones with the lowest P-value for the independent variable.
+>      + Sep2: Fit the full model with all possible predictors. 
 >      + Step3: Consider the predictor with the highest P-Value. if P> SL, go to step 4, otherwise FIN (your model is ready)
 >      + Step4: Remove the predictor
 >      + Step5: Fit model without the variable
@@ -33,6 +33,12 @@ Stepwise regression is a method of fitting regression models in a step-by-step m
 > + Start with no predictors in the model.
 > + Add predictors one by one based on their significance (e.g., smallest p-value or highest F-statistic).
 > + Stop when no more significant predictors can be added.
+> ### Steps
+> 1. Select a significant level to enter the model (SL = 0.05)
+> 2. Fit all simple regression model (y~Xn). Slect the one with the lowest p-value
+> 3. keep this variable and fit all possible models with one extra predictor added to the one you already have
+> 4. Consider the predictor with the lowest p-value. If p > SL, go to step3, otherwise go to finish
+> ### Note: you grow the model with one variable at a time. Once the P > SL, you finish the model because no more variable with lowest p-value, If you just added a variable that is insignificant, go back to the previous model not the new one.
 
 > __Backward Elimination:__
 > + Start with all predictors in the model.
@@ -42,3 +48,4 @@ Stepwise regression is a method of fitting regression models in a step-by-step m
 > __Bidirectional Elimination (Stepwise Selection):__
 > + Combines forward selection and backward elimination.
 > + Add and remove predictors simultaneously, evaluating at each step whether to include or exclude a variable.
+
