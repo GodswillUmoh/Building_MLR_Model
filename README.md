@@ -28,4 +28,17 @@
 > 5. + Score Comparison
 
 ### Stepwise Regression
-> It refers to Number 2,3 & 4. Sometimes people refer to Stepwise regression as Bidirectional Elimination
+Stepwise regression is a method of fitting regression models in a step-by-step manner, adding or removing predictors based on specific criteria, to identify a subset of variables that best explains the variation in the response variable. It can be used for both linear and logistic regression. It refers to Number 2,3 & 4. Sometimes people refer to Stepwise regression as Bidirectional Elimination
+> __Forward Selection:__
+> + Start with no predictors in the model.
+> + Add predictors one by one based on their significance (e.g., smallest p-value or highest F-statistic).
+> + Stop when no more significant predictors can be added.
+
+> __Backward Elimination:__
+> + Start with all predictors in the model.
+> + Remove predictors one by one based on their insignificance (e.g., largest p-value or lowest F-statistic).
+> + Stop when all remaining predictors are significant.
+
+> __Bidirectional Elimination (Stepwise Selection):__
+> + Combines forward selection and backward elimination.
+> + Add and remove predictors simultaneously, evaluating at each step whether to include or exclude a variable.
