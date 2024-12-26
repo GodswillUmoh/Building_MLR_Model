@@ -8,12 +8,19 @@
 > 1. Garbage in Garbage out. Do not just use any how variables in your model as it can affect its efficiency
 > 2. Selecting the ones that contribute to prdicting is better than having a thousand of them that do not all predict something.
 
+## Stepwise Regression
+Stepwise regression is a method of fitting regression models in a step-by-step manner, adding or removing predictors based on specific criteria, to identify a subset of variables that best explains the variation in the response variable. It can be used for both linear and logistic regression. It refers to Number 2,3 & 4. Sometimes people refer to Stepwise regression as Bidirectional Elimination
+
 ## Five Methods to Building A Model
 > 1. + Use-In
 >    + In this methos, you use all the variables. This method is use when you have prior knowledge of the variable, and you know they are good predictors or you are provided with the variables to just build the model
 >    + You can adopt this method if you are preparing for backward elimination
 
 > 2. + Backward Elimination:
+> + Start with all predictors in the model.
+> + Remove predictors one by one based on their insignificance (e.g., largest p-value or lowest F-statistic).
+> + Stop when all remaining predictors are significant.
+>   
 >      #### Step By Step
 >      + Step 1: Select a significant level to stay in the model (SL=0.05)
 >      + Sep2: Fit the full model with all possible predictors. 
@@ -23,27 +30,24 @@
 >        Note: after removing the predictors, you have to rebuild the model or fit again as its going to have different coefficient and constant too is going to be different
 >        Once you remove a variable, it affects all other variable reason to rebuild model
 
-> 3. + Forward Selection
 > 4. + Bidirectional Elimination
 > 5. + Score Comparison
 
-### Stepwise Regression
-Stepwise regression is a method of fitting regression models in a step-by-step manner, adding or removing predictors based on specific criteria, to identify a subset of variables that best explains the variation in the response variable. It can be used for both linear and logistic regression. It refers to Number 2,3 & 4. Sometimes people refer to Stepwise regression as Bidirectional Elimination
-> __Forward Selection:__
+
+> 3. __Forward Selection:__
 > + Start with no predictors in the model.
 > + Add predictors one by one based on their significance (e.g., smallest p-value or highest F-statistic).
 > + Stop when no more significant predictors can be added.
+
 > ### Steps
 > 1. Select a significant level to enter the model (SL = 0.05)
 > 2. Fit all simple regression model (y~Xn). Slect the one with the lowest p-value
 > 3. keep this variable and fit all possible models with one extra predictor added to the one you already have
 > 4. Consider the predictor with the lowest p-value. If p > SL, go to step3, otherwise go to finish
+> 
 > ### Note: you grow the model with one variable at a time. Once the P > SL, you finish the model because no more variable with lowest p-value, If you just added a variable that is insignificant, go back to the previous model not the new one.
 
-> __Backward Elimination:__
-> + Start with all predictors in the model.
-> + Remove predictors one by one based on their insignificance (e.g., largest p-value or lowest F-statistic).
-> + Stop when all remaining predictors are significant.
+
 
 > __Bidirectional Elimination (Stepwise Selection):__
 > + Combines forward selection and backward elimination.
