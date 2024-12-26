@@ -30,10 +30,6 @@ Stepwise regression is a method of fitting regression models in a step-by-step m
 >        Note: after removing the predictors, you have to rebuild the model or fit again as its going to have different coefficient and constant too is going to be different
 >        Once you remove a variable, it affects all other variable reason to rebuild model
 
-> 4. + Bidirectional Elimination
-> 5. + Score Comparison
-
-
 > 3. __Forward Selection:__
 > + Start with no predictors in the model.
 > + Add predictors one by one based on their significance (e.g., smallest p-value or highest F-statistic).
@@ -47,9 +43,27 @@ Stepwise regression is a method of fitting regression models in a step-by-step m
 > 
 > ### Note: you grow the model with one variable at a time. Once the P > SL, you finish the model because no more variable with lowest p-value, If you just added a variable that is insignificant, go back to the previous model not the new one.
 
-
-
 > __Bidirectional Elimination (Stepwise Selection):__
 > + Combines forward selection and backward elimination.
 > + Add and remove predictors simultaneously, evaluating at each step whether to include or exclude a variable.
+>   
+>   __Steps for Bidirectional Elimination:__
+>   1. Select a significance level to enter and to stay in the model e.g SLENTER = 0.05, SLSTAY = 0.05
+>   2. Perform the next step of Forward selection (new variables must have P < SLENTER to enter)
+>   3. Perform all steps of backward elimination (Old variables must have P < SLSTAY to stay)
+>   4. No new variables can enter and no old variable can exit (proceed to finish because your model is ready)
+
+
+> 5. + Score Comparison
+>    + All possible Models
+>    + It is the more thorough approach but takes lot of resources.
+>    Steps:
+>    + 1. You select a criterion of goodness of fit (e.g Akaike Criterion)
+>    + 2. Construct all possible regression models. 2(power n)- 1 total combinations
+>    + 3. Select the one with the best criterion
+>      4. model is ready e.g if you have 10 columns in your dataset, it means you will have 1023 models. That's a lot
+
+
+## Which is fastest of all types?
+Backward Elimination, It's a much faster approach
 
