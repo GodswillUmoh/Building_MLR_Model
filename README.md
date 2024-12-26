@@ -14,9 +14,9 @@
 >    + You can adopt this method if you are preparing for backward elimination
 
 > 2. + Backward Elimination:
->      #### Step By Step
+>      #### Steps for Stepwise regression- step By Step
 >      + Step 1: Select a significant level to stay in the model (SL=0.05)
->      + Sep2: Fit the full model with all possible predictors
+>      + Sep2: Fit the full model with all possible predictors. Select the ones with the lowest P-value for the independent variable.
 >      + Step3: Consider the predictor with the highest P-Value. if P> SL, go to step 4, otherwise FIN (your model is ready)
 >      + Step4: Remove the predictor
 >      + Step5: Fit model without the variable
