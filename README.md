@@ -17,10 +17,12 @@
 >      #### Step By Step
 >      + Step 1: Select a significant level to stay in the model (SL=0.05)
 >      + Sep2: Fit the full model with all possible predictors
->      + Step3: Consider the predictor with the highest P-Value. if P> SL, go to step 4, otherwise FIN
+>      + Step3: Consider the predictor with the highest P-Value. if P> SL, go to step 4, otherwise FIN (your model is ready)
 >      + Step4: Remove the predictor
 >      + Step5: Fit model without the variable
->      + 
+>        Note: after removing the predictors, you have to rebuild the model or fit again as its going to have different coefficient and constant too is going to be different
+>        Once you remove a variable, it affects all other variable reason to rebuild model
+
 > 3. + Forward Selection
 > 4. + Bidirectional Elimination
 > 5. + Score Comparison
